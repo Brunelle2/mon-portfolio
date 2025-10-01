@@ -213,6 +213,54 @@
             border-left: 3px solid var(--primary-accent);
         }
 
+        /* Screenshot Gallery Styles */
+        .screenshot-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .screenshot-item {
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #333;
+            transition: transform 0.3s, border-color 0.3s;
+            cursor: pointer;
+        }
+
+        .screenshot-item:hover {
+            transform: scale(1.05);
+            border-color: var(--primary-accent);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .demo-button {
+            background: transparent;
+            border: 2px solid #00D4FF;
+            color: #00D4FF;
+            transition: all 0.3s;
+        }
+
+        .demo-button:hover {
+            background: #00D4FF;
+            color: white;
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+        }
+
     </style>
 </head>
 <body class="w-full overflow-x-hidden">
@@ -268,7 +316,7 @@
                     Façonner des <span class="accent-text">Frontières</span> Numériques Audacieuses
                 </h1>
                 <p class="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-8 reveal" style="transition-delay: 200ms;">
-                    Bonjour, je suis SIEWE Brunelle. Une développeuse debutante doter d'une grande creativité et une réelle passion pour l'informatique.
+                    Bonjour, je suis SIEWE Brunelle. Une développeuse debutante doter d'une grande creativiter et une reelle passion pour l'informatique.
                 </p>
                 <a href="#projects" class="cta-button inline-block text-white font-semibold text-lg py-3 px-8 reveal" style="transition-delay: 400ms;">
                     Voir Mes Projets
@@ -315,40 +363,43 @@
         <!-- Projects Section -->
         <section id="projects" class="py-20 lg:py-32">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 reveal">Étude de Cas</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 reveal">Études de Cas</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <!-- Project Card 1 -->
                     <div class="sharp-card overflow-hidden reveal">
-                        <img src="https://placehold.co/600x400/141414/FFFFFF?text=Project One" alt="Project Screenshot" class="w-full h-56 object-cover">
+                        <img src="https://placehold.co/600x400/141414/FFFFFF?text=Visibook" alt="Project Screenshot" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2 accent-text">Visibook</h3>
-                            <p class="text-text-secondary mb-4">Une application de gestion des visites développée pour MULTIPRINT LABELS&PACKAGING.</p>
+                            <h3 class="text-2xl font-bold mb-2 accent-text">Projet visibook</h3>
+                            <p class="text-text-secondary mb-4">Une application de gestion des visites développée pour MULTIPRINT LABELS&PACKAGING avec pour objectifs Optimisation des processus d'accueil et suivi des visiteurs..</p>
                             <div class="space-x-4">
                                 <a href="#" class="font-semibold hover:text-primary-accent transition details-link" data-project="1">Détails</a>
+                                <a href="#" class="font-semibold hover:text-primary-accent transition demo-link" data-project="1">Démo</a>
                                 <a href="https://github.com/Brunelle2/visits" class="font-semibold hover:text-primary-accent transition" target="_blank">Code Source</a>
                             </div>
                         </div>
                     </div>
                     <!-- Project Card 2 -->
                     <div class="sharp-card overflow-hidden reveal" style="transition-delay: 200ms;">
-                        <img src="https://placehold.co/600x400/141414/FFFFFF?text=Project Two" alt="Project Screenshot" class="w-full h-56 object-cover">
+                        <img src="https://placehold.co/600x400/141414/FFFFFF?text=StockManager" alt="Project Screenshot" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2 accent-text">stockmanagment</h3>
-                            <p class="text-text-secondary mb-4">Application de gestion de stocks avec suivi en temps réel des entrées/sorties.</p>
+                            <h3 class="text-2xl font-bold mb-2 accent-text">StockManager</h3>
+                            <p class="text-text-secondary mb-4">Application de gestion de stocks avec suivi en temps réel des entrées/sorties et alertes automatiques.</p>
                             <div class="space-x-4">
                                 <a href="#" class="font-semibold hover:text-primary-accent transition details-link" data-project="2">Détails</a>
+                                <a href="#" class="font-semibold hover:text-primary-accent transition demo-link" data-project="2">Démo</a>
                                 <a href="https://github.com/Brunelle2/stockmanagment" class="font-semibold hover:text-primary-accent transition" target="_blank">Code Source</a>
                             </div>
                         </div>
                     </div>
                     <!-- Project Card 3 -->
                     <div class="sharp-card overflow-hidden reveal" style="transition-delay: 400ms;">
-                        <img src="https://placehold.co/600x400/141414/FFFFFF?text=Project Three" alt="Project Screenshot" class="w-full h-56 object-cover">
+                        <img src="https://placehold.co/600x400/141414/FFFFFF?text=AppliMeteo" alt="Project Screenshot" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2 accent-text">AppliMeteo</h3>
+                            <h3 class="text-2xl font-bold mb-2 accent-text">AppliMétéo</h3>
                             <p class="text-text-secondary mb-4">Application météo moderne fournissant des informations météorologiques fiables en temps réel.</p>
                             <div class="space-x-4">
                                 <a href="#" class="font-semibold hover:text-primary-accent transition details-link" data-project="3">Détails</a>
+                                <a href="#" class="font-semibold hover:text-primary-accent transition demo-link" data-project="3">Démo</a>
                                 <a href="https://github.com/Brunelle2/applicationMeteo" class="font-semibold hover:text-primary-accent transition" target="_blank">Code Source</a>
                             </div>
                         </div>
@@ -406,9 +457,8 @@
     <div id="project-modal-1" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <h2 class="text-3xl font-bold mb-4 accent-text">Projet One- visibook</h2>
-            <p class="text-text-secondary mb-6">Application de  gestion des visites développé pour <strong>MULTIPRINT LABELS&PACKAGING</strong>. Cette application optimise les processus d'accueil et permet un suivi complet des visiteurs.</p>
-                
+            <h2 class="text-3xl font-bold mb-4 accent-text">Visibook - Gestion des Visites</h2>
+            <p class="text-text-secondary mb-6">Application de gestion des visites développée pour MULTIPRINT LABELS&PACKAGING</p>
             
             <div class="project-features">
                 <h3 class="text-xl font-bold mb-4">Fonctionnalités Principales</h3>
@@ -424,7 +474,9 @@
                 <div class="feature-item">
                     <strong>Sécurité Renforcée</strong> - Système d'authentification et contrôle d'accès
                 </div>
-               
+                <div class="feature-item">
+                    <strong>Rapports Automatisés</strong> - Génération et export de rapports détaillés
+                </div>
             </div>
 
             <div class="project-tech mb-6">
@@ -451,20 +503,26 @@
     <div id="project-modal-2" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <h2 class="text-3xl font-bold mb-4 accent-text">Project Two - stockmanagment</h2>
-            <p class="text-text-secondary mb-6">Application  de gestion de stocks avec suivi en temps réel</p>
+            <h2 class="text-3xl font-bold mb-4 accent-text">StockManager - Gestion de Stocks</h2>
+            <p class="text-text-secondary mb-6">Application complète de gestion de stocks avec suivi en temps réel</p>
             
             <div class="project-features">
                 <h3 class="text-xl font-bold mb-4">Fonctionnalités Principales</h3>
                 <div class="feature-item">
                     <strong>Suivi des Entrées/Sorties</strong> - Enregistrement automatique des mouvements de stock
                 </div>
-        
+                <div class="feature-item">
+                    <strong>Alertes Intelligentes</strong> - Notifications pour les stocks bas et ruptures
+                </div>
                 <div class="feature-item">
                     <strong>Tableaux de Bord</strong> - Visualisation des données en temps réel
                 </div>
-                
-                
+                <div class="feature-item">
+                    <strong>Gestion des Fournisseurs</strong> - Suivi des commandes et relations fournisseurs
+                </div>
+                <div class="feature-item">
+                    <strong>Rapports de Performance</strong> - Analyse des tendances et optimisation
+                </div>
             </div>
 
             <div class="project-tech mb-6">
@@ -473,6 +531,7 @@
                     <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">PHP</span>
                     <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">MySQL</span>
                     <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">JavaScript</span>
+                    <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Chart.js</span>
                     <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">HTML/CSS</span>
                 </div>
             </div>
@@ -489,7 +548,7 @@
     <div id="project-modal-3" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <h2 class="text-3xl font-bold mb-4 accent-text">Project three - AppliMétéo </h2>
+            <h2 class="text-3xl font-bold mb-4 accent-text">AppliMétéo - Application Météo</h2>
             <p class="text-text-secondary mb-6">Application météo moderne avec données en temps réel</p>
             
             <div class="project-features">
@@ -518,13 +577,121 @@
                     <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">HTML5</span>
                     <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">CSS3</span>
                     <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">API REST</span>
-        
+                    <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">LocalStorage</span>
                 </div>
             </div>
 
             <div class="project-links">
                 <a href="https://github.com/Brunelle2/applicationMeteo" class="cta-button inline-block text-white font-semibold py-2 px-6" target="_blank">
                     Voir le Code Source
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Modals with Screenshots -->
+    <!-- Demo Modal 1: Visibook -->
+    <div id="demo-modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 class="text-3xl font-bold mb-4 accent-text">Visibook - Captures d'écran</h2>
+            <p class="text-text-secondary mb-6">Découvrez l'interface de l'application de gestion des visites</p>
+            
+            <div class="screenshot-gallery">
+                <div class="screenshot-item">
+                    <img src="connexion.png" alt="Interface principale Visibook">
+                    <p class="text-center text-sm mt-2 text-text-secondary">Interface principale</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="cadre.png" alt="Gestion des utilisateurs">
+                    <p class="text-center text-sm mt-2 text-text-secondary">Gestion utilisateurs</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="dashboard.png" alt="Tableau de bord statistiques">
+                    <p class="text-center text-sm mt-2 text-text-secondary">Tableau de bord</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="visites.png" alt="Rapports et analytics">
+                    <p class="text-center text-sm mt-2 text-text-secondary">Gestion de visites </p>
+                </div>
+            </div>
+
+            <div class="project-links mt-6">
+                <a href="#" class="demo-button inline-block text-white font-semibold py-2 px-6 details-link" data-project="1">
+                    Voir les Détails du Projet
+                </a>
+                <a href="https://github.com/Brunelle2/visits" class="cta-button inline-block text-white font-semibold py-2 px-6" target="_blank">
+                    Code Source GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Modal 2: StockManager -->
+    <div id="demo-modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 class="text-3xl font-bold mb-4 accent-text">StockManager - Captures d'écran</h2>
+            <p class="text-text-secondary mb-6">Explorez l'interface de gestion de stocks</p>
+            
+            <div class="screenshot-gallery">
+                <div class="screenshot-item">
+                    <img src="connexions.png" alt="connexion">
+                    <p class="text-center text-sm mt-2 text-text-secondary">interface principale</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="dashboards.png" alt="tableau de bord">
+                    <p class="text-center text-sm mt-2 text-text-secondary">tableau de bord</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="enregistrement.png" alt="Alertes de stock">
+                    <p class="text-center text-sm mt-2 text-text-secondary">Enregistrement produits</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="listes.png" alt="listes">
+                    <p class="text-center text-sm mt-2 text-text-secondary">listes produits</p>
+                </div>
+            </div>
+
+            <div class="project-links mt-6">
+                <a href="#" class="demo-button inline-block text-white font-semibold py-2 px-6 details-link" data-project="2">
+                    Voir les Détails du Projet
+                </a>
+                <a href="https://github.com/Brunelle2/stockmanagment" class="cta-button inline-block text-white font-semibold py-2 px-6" target="_blank">
+                    Code Source GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Modal 3: AppliMétéo -->
+    <div id="demo-modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 class="text-3xl font-bold mb-4 accent-text">AppliMétéo - Captures d'écran</h2>
+            <p class="text-text-secondary mb-6">Visualisez l'application météo en action</p>
+            
+            <div class="screenshot-gallery">
+                <div class="screenshot-item">
+                    <img src="previsions.png" alt="Prévisions météo">
+                    <p class="text-center text-sm mt-2 text-text-secondary">Prévisions détaillées</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="meteo.png" alt="Météo actuelle">
+                    <p class="text-center text-sm mt-2 text-text-secondary">Météo actuelle</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="recherche.png" alt="Recherche par localisation">
+                    <p class="text-center text-sm mt-2 text-text-secondary">Recherche par ville</p>
+                </div>
+            </div>
+
+            <div class="project-links mt-6">
+                <a href="#" class="demo-button inline-block text-white font-semibold py-2 px-6 details-link" data-project="3">
+                    Voir les Détails du Projet
+                </a>
+                <a href="https://github.com/Brunelle2/applicationMeteo" class="cta-button inline-block text-white font-semibold py-2 px-6" target="_blank">
+                    Code Source GitHub
                 </a>
             </div>
         </div>
@@ -594,15 +761,29 @@
 
             // --- Project Details Modal Functionality ---
             const detailLinks = document.querySelectorAll('.details-link');
+            const demoLinks = document.querySelectorAll('.demo-link');
             const modals = document.querySelectorAll('.modal');
             const closeButtons = document.querySelectorAll('.close-btn');
 
-            // Open modal when details link is clicked
+            // Open details modal when details link is clicked
             detailLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
                     const projectId = link.getAttribute('data-project');
                     const modal = document.getElementById(`project-modal-${projectId}`);
+                    if (modal) {
+                        modal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            // Open demo modal when demo link is clicked
+            demoLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const projectId = link.getAttribute('data-project');
+                    const modal = document.getElementById(`demo-modal-${projectId}`);
                     if (modal) {
                         modal.style.display = 'block';
                         document.body.style.overflow = 'hidden';
